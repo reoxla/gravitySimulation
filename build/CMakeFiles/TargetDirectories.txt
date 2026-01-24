@@ -1,0 +1,3 @@
+/home/eren/projects/c++/GravitySimulator/build/CMakeFiles/gravitySimulator.dir
+/home/eren/projects/c++/GravitySimulator/build/CMakeFiles/edit_cache.dir
+/home/eren/projects/c++/GravitySimulator/build/CMakeFiles/rebuild_cache.dir

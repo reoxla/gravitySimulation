@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/eren/projects/c++/GravitySimulator/build",
+  "command": "/usr/bin/clang++ -I/home/eren/projects/c++/GravitySimulator/include -g -o CMakeFiles/gravitySimulator.dir/main.cpp.o -c /home/eren/projects/c++/GravitySimulator/main.cpp",
+  "file": "/home/eren/projects/c++/GravitySimulator/main.cpp",
+  "output": "/home/eren/projects/c++/GravitySimulator/build/CMakeFiles/gravitySimulator.dir/main.cpp.o"
+},
+{
+  "directory": "/home/eren/projects/c++/GravitySimulator/build",
+  "command": "/usr/bin/clang -I/home/eren/projects/c++/GravitySimulator/include -g -o CMakeFiles/gravitySimulator.dir/src/glad.c.o -c /home/eren/projects/c++/GravitySimulator/src/glad.c",
+  "file": "/home/eren/projects/c++/GravitySimulator/src/glad.c",
+  "output": "/home/eren/projects/c++/GravitySimulator/build/CMakeFiles/gravitySimulator.dir/src/glad.c.o"
+},
+{
+  "directory": "/home/eren/projects/c++/GravitySimulator/build",
+  "command": "/usr/bin/clang++ -I/home/eren/projects/c++/GravitySimulator/include -g -o CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o -c /home/eren/projects/c++/GravitySimulator/src/buffers.cpp",
+  "file": "/home/eren/projects/c++/GravitySimulator/src/buffers.cpp",
+  "output": "/home/eren/projects/c++/GravitySimulator/build/CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o"
+}
+]
