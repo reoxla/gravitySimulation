@@ -1,17 +1,4 @@
 #include "glad.h"
-class VAO
-{
-private:
-    
-public:
-    GLuint ID;
-    VAO();
-    void bind();
-    void unbind();
-    void attribPointer();
-    void enable();
-    void disable();
-};
 
 class VBO
 {
@@ -26,3 +13,19 @@ public:
     void enable();
     void disable();
 };
+
+
+class VAO
+{
+private:
+    
+public:
+    GLuint ID;
+    VAO();
+    void bind();
+    void unbind();
+    void attribPointer(VBO v);
+    void enable();
+    void disable();
+};
+

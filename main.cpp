@@ -61,8 +61,9 @@ int main(){
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
-    GLFWwindow* window = glfwCreateWindow(800, 800, "window", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(300, 300, "window", NULL, NULL);
     
     if(!window){
         glfwTerminate();
@@ -76,7 +77,7 @@ int main(){
         return -1;
     }
 
-    glViewport(0, 0, 800, 800);
+    glViewport(0, 0, 300, 300);
 
     celestialBody planet = celestialBody(500, glm::vec3(0.0f));
     planet.buildCircle(0.5f, 20);
@@ -88,16 +89,16 @@ int main(){
     vertexArrayObject.bind();
     
     
-    vertexArrayObject.attribPointer();
+    vertexArrayObject.attribPointer(vertexBufferObject);
     vertexBufferObject.bufferData(sizeof(glm::vec3) * vertices.size(), &vertices[0]);
     vertexArrayObject.disable();
 
-    glm::mat4 translationMatrix;
-
+    //glm::mat4 translationMatrix;
     vertexArrayObject.enable();
     while(!glfwWindowShouldClose(window)){
         glfwPollEvents();
-        glClearColor(0.2f, 0.0f, 0.0f, 1.0f);
+        
+        glClearColor(0.5f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         vertexArrayObject.bind();
