@@ -93,6 +93,8 @@ int main(){
     vertexArrayObject.disable();
 
     glm::mat4 translationMatrix;
+
+    vertexArrayObject.enable();
     while(!glfwWindowShouldClose(window)){
         glfwPollEvents();
         glClearColor(0.2f, 0.0f, 0.0f, 1.0f);
@@ -101,8 +103,8 @@ int main(){
         vertexArrayObject.bind();
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
-        glm::translate(translationMatrix, glm::vec3(0.01f));
-        vertices[0]*=translationMatrix;
+        //glm::translate(translationMatrix, glm::vec3(0.01f));
+        //vertices[0]*=translationMatrix;
 
         glfwSwapBuffers(window);
     }

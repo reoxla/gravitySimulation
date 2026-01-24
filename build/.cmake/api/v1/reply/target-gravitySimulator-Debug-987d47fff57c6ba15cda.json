@@ -61,7 +61,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/eren/projects/c++/GravitySimulator/include"
+					"path" : "/Users/eren/projects/c++/gravitySimulation/include"
 				}
 			],
 			"language" : "CXX",
@@ -82,7 +82,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/eren/projects/c++/GravitySimulator/include"
+					"path" : "/Users/eren/projects/c++/gravitySimulation/include"
 				}
 			],
 			"language" : "C",
@@ -99,6 +99,10 @@
 		[
 			{
 				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-search_paths_first -Wl,-headerpad_max_install_names",
 				"role" : "flags"
 			},
 			{
@@ -141,7 +145,8 @@
 				1,
 				3,
 				4,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -183,6 +188,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/glm/gtc/matrix_transform.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/KHR/khrplatform.h",
 			"sourceGroupIndex" : 1
 		}
 	],

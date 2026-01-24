@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-addr2line"
+			"value" : "CMAKE_ADDR2LINE-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-ar"
+			"value" : "/usr/bin/ar"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/eren/projects/c++/GravitySimulator/build"
+			"value" : "/Users/eren/projects/c++/gravitySimulation/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -103,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cmake"
+			"value" : "/usr/local/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cpack"
+			"value" : "/usr/local/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/ctest"
+			"value" : "/usr/local/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -144,54 +144,6 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "/usr/bin/clang++"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER_AR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "LLVM archiver"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-ar"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "`clang-scan-deps` dependency scanner"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/clang-scan-deps"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER_RANLIB",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Generate index for LLVM archive"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-ranlib"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -290,54 +242,6 @@
 			"value" : "/usr/bin/clang"
 		},
 		{
-			"name" : "CMAKE_C_COMPILER_AR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "LLVM archiver"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-ar"
-		},
-		{
-			"name" : "CMAKE_C_COMPILER_CLANG_SCAN_DEPS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "`clang-scan-deps` dependency scanner"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/clang-scan-deps"
-		},
-		{
-			"name" : "CMAKE_C_COMPILER_RANLIB",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Generate index for LLVM archive"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-ranlib"
-		},
-		{
 			"name" : "CMAKE_C_FLAGS",
 			"properties" : 
 			[
@@ -431,7 +335,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-dlltool"
+			"value" : "CMAKE_DLLTOOL-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_EDIT_COMMAND",
@@ -443,7 +347,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/ccmake"
+			"value" : "/usr/local/bin/ccmake"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -455,7 +359,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "ELF"
+			"value" : "MACHO"
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS",
@@ -587,7 +491,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/eren/projects/c++/GravitySimulator/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +551,23 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/eren/projects/c++/GravitySimulator"
+			"value" : "/Users/eren/projects/c++/gravitySimulation"
+		},
+		{
+			"name" : "CMAKE_INSTALL_NAME_TOOL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/install_name_tool"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -660,18 +580,6 @@
 			],
 			"type" : "PATH",
 			"value" : "/usr/local"
-		},
-		{
-			"name" : "CMAKE_INSTALL_SO_NO_EXE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Install .so files without execute permission."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -687,7 +595,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ld.lld"
+			"value" : "/usr/bin/ld"
 		},
 		{
 			"name" : "CMAKE_LIST_FILE_NAME",
@@ -715,7 +623,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ninja"
+			"value" : "/usr/local/bin/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -811,7 +719,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-nm"
+			"value" : "/usr/bin/nm"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -839,7 +747,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-objcopy"
+			"value" : "CMAKE_OBJCOPY-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -855,7 +763,43 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-objdump"
+			"value" : "/usr/bin/objdump"
+		},
+		{
+			"name" : "CMAKE_OSX_ARCHITECTURES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build architectures for OSX"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_OSX_DEPLOYMENT_TARGET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Minimum OS X version to target for deployment (at runtime); newer APIs weak linked. Set to empty string for default value."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_OSX_SYSROOT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The product will be built against the headers and libraries located inside the indicated SDK."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1003,7 +947,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-ranlib"
+			"value" : "/usr/bin/ranlib"
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -1019,7 +963,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-readelf"
+			"value" : "CMAKE_READELF-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1031,7 +975,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake"
+			"value" : "/usr/local/share/cmake"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1239,7 +1183,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/llvm-strip"
+			"value" : "/usr/bin/strip"
 		},
 		{
 			"name" : "CMAKE_TAPI",
@@ -1255,7 +1199,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "CMAKE_TAPI-NOTFOUND"
+			"value" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/tapi"
 		},
 		{
 			"name" : "CMAKE_UNAME",
@@ -1295,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/eren/projects/c++/GravitySimulator/build"
+			"value" : "/Users/eren/projects/c++/gravitySimulation/build"
 		},
 		{
 			"name" : "gravitySimulator_IS_TOP_LEVEL",
@@ -1319,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/eren/projects/c++/GravitySimulator"
+			"value" : "/Users/eren/projects/c++/gravitySimulation"
 		}
 	],
 	"kind" : "cache",

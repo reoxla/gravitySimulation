@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/gravitySimulator.dir/link.d CMakeFiles/gravitySimulator.dir/main.cpp.o CMakeFiles/gravitySimulator.dir/src/glad.c.o CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o -o gravitySimulator  -lglfw
