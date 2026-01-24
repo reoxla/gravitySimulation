@@ -4,6 +4,7 @@
 #include "src/glm/gtc/matrix_transform.hpp"
 #include "src/glad.h"
 #include "src/buffers.h"
+#include "src/shaders.h"
 #include <GLFW/glfw3.h>
 
 std::vector<glm::vec3> vertices;
@@ -45,8 +46,11 @@ void celestialBody::buildCircle(float radius, int vCount)
     for (int i = 0; i < triangleCount; i++)
     {
         vertices.push_back(temp[0]);
+        vertices.push_back(glm::vec3(0.2f, 0.4f, 0.6f));
         vertices.push_back(temp[i + 1]);
+        vertices.push_back(glm::vec3(0.2f, 0.4f, 0.6f));
         vertices.push_back(temp[i + 2]);
+        vertices.push_back(glm::vec3(0.2f, 0.4f, 0.6f));
     }
 }
 
@@ -63,7 +67,7 @@ int main(){
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
-    GLFWwindow* window = glfwCreateWindow(300, 300, "window", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(800, 800, "window", NULL, NULL);
     
     if(!window){
         glfwTerminate();
@@ -77,17 +81,21 @@ int main(){
         return -1;
     }
 
-    glViewport(0, 0, 300, 300);
+    int display_w, display_h;
+    glfwGetFramebufferSize(window, &display_w, &display_h);
+    glViewport(0, 0, display_w, display_h);
 
     celestialBody planet = celestialBody(500, glm::vec3(0.0f));
     planet.buildCircle(0.5f, 20);
     
+    Shader shader = Shader("shaders/shader.vs", "shaders/shader.fs");
+    shader.use();
+
     VBO vertexBufferObject = VBO();
     VAO vertexArrayObject = VAO();
 
     vertexBufferObject.bind();
     vertexArrayObject.bind();
-    
     
     vertexArrayObject.attribPointer(vertexBufferObject);
     vertexBufferObject.bufferData(sizeof(glm::vec3) * vertices.size(), &vertices[0]);

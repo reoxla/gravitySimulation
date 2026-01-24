@@ -53,7 +53,7 @@ build CMakeFiles/gravitySimulator.dir/main.cpp.o: CXX_COMPILER__gravitySimulator
   CONFIG = Debug
   DEP_FILE = CMakeFiles/gravitySimulator.dir/main.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/Users/eren/projects/c++/gravitySimulation/include
+  INCLUDES = -I/Users/eren/projects/c++/gravitySimulation/src -I/Users/eren/projects/c++/gravitySimulation/include
   OBJECT_DIR = CMakeFiles/gravitySimulator.dir
   OBJECT_FILE_DIR = CMakeFiles/gravitySimulator.dir
   TARGET_SUPPORT_DIR = CMakeFiles/gravitySimulator.dir
@@ -62,7 +62,7 @@ build CMakeFiles/gravitySimulator.dir/src/glad.c.o: C_COMPILER__gravitySimulator
   CONFIG = Debug
   DEP_FILE = CMakeFiles/gravitySimulator.dir/src/glad.c.o.d
   FLAGS = -g
-  INCLUDES = -I/Users/eren/projects/c++/gravitySimulation/include
+  INCLUDES = -I/Users/eren/projects/c++/gravitySimulation/src -I/Users/eren/projects/c++/gravitySimulation/include
   OBJECT_DIR = CMakeFiles/gravitySimulator.dir
   OBJECT_FILE_DIR = CMakeFiles/gravitySimulator.dir/src
   TARGET_SUPPORT_DIR = CMakeFiles/gravitySimulator.dir
@@ -71,7 +71,16 @@ build CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o: CXX_COMPILER__gravitySi
   CONFIG = Debug
   DEP_FILE = CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/Users/eren/projects/c++/gravitySimulation/include
+  INCLUDES = -I/Users/eren/projects/c++/gravitySimulation/src -I/Users/eren/projects/c++/gravitySimulation/include
+  OBJECT_DIR = CMakeFiles/gravitySimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/gravitySimulator.dir/src
+  TARGET_SUPPORT_DIR = CMakeFiles/gravitySimulator.dir
+
+build CMakeFiles/gravitySimulator.dir/src/shaders.cpp.o: CXX_COMPILER__gravitySimulator_unscanned_Debug /Users/eren/projects/c++/gravitySimulation/src/shaders.cpp || cmake_object_order_depends_target_gravitySimulator
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/gravitySimulator.dir/src/shaders.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/Users/eren/projects/c++/gravitySimulation/src -I/Users/eren/projects/c++/gravitySimulation/include
   OBJECT_DIR = CMakeFiles/gravitySimulator.dir
   OBJECT_FILE_DIR = CMakeFiles/gravitySimulator.dir/src
   TARGET_SUPPORT_DIR = CMakeFiles/gravitySimulator.dir
@@ -84,7 +93,7 @@ build CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o: CXX_COMPILER__gravitySi
 #############################################
 # Link the executable gravitySimulator
 
-build gravitySimulator: CXX_EXECUTABLE_LINKER__gravitySimulator_Debug CMakeFiles/gravitySimulator.dir/main.cpp.o CMakeFiles/gravitySimulator.dir/src/glad.c.o CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o
+build gravitySimulator: CXX_EXECUTABLE_LINKER__gravitySimulator_Debug CMakeFiles/gravitySimulator.dir/main.cpp.o CMakeFiles/gravitySimulator.dir/src/glad.c.o CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o CMakeFiles/gravitySimulator.dir/src/shaders.cpp.o
   CONFIG = Debug
   FLAGS = -g
   LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names
