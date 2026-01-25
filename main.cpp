@@ -105,6 +105,7 @@ int main(){
     planet.buildCircle(0.5f, 200);
     
     Shader shader = Shader("shaders/shader.vs", "shaders/shader.fs");
+    shader.use();
 
     VBO vertexBufferObject = VBO();
     VAO vertexArrayObject = VAO();

@@ -1,4 +1,5 @@
 # ninja log v7
+<<<<<<< HEAD
 19	340	1769289602697804140	CMakeFiles/gravitySimulator.dir/src/glad.c.o	79aad0a9e1d98758
 29	1606	1769290638879097932	CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o	12916e8f24c1e92
 28	2146	1769290638877797302	CMakeFiles/gravitySimulator.dir/main.cpp.o	828ad4d7c94aa8b9
@@ -47,3 +48,10 @@
 1801	1951	1769341332397222899	gravitySimulator	376a362293d51450
 18	1808	1769341385563035720	CMakeFiles/gravitySimulator.dir/main.cpp.o	828ad4d7c94aa8b9
 1808	1973	1769341387352678606	gravitySimulator	376a362293d51450
+=======
+1	236	1769293107801015178	CMakeFiles/gravitySimulator.dir/src/glad.c.o	e5d848260093b8b3
+3	835	1769293107802015185	CMakeFiles/gravitySimulator.dir/src/shaders.cpp.o	6c1a44ed5d03f3ba
+2	1131	1769293107801895215	CMakeFiles/gravitySimulator.dir/src/buffers.cpp.o	f8bf025d8fe2b33a
+4	1792	1769332934549919214	CMakeFiles/gravitySimulator.dir/main.cpp.o	6a50f24abe8108b4
+1792	1948	1769332936337939553	gravitySimulator	e20dc03440782fd
+>>>>>>> refs/remotes/origin/main
