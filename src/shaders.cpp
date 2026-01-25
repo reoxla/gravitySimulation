@@ -55,8 +55,10 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
     glCompileShader(fragment);
     glGetShaderiv(fragment, GL_COMPILE_STATUS, &success);
     {
-        glGetShaderInfoLog(fragment, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+        if(!success){
+            glGetShaderInfoLog(fragment, 512, NULL, infoLog);
+            std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+        }
     };
     
     ID = glCreateProgram();
@@ -81,9 +83,9 @@ void Shader::use()
     glUseProgram(ID);
 }
 
-void Shader::setBool(const std::string &name, bool value) const
+void Shader::setVec3(const std::string &name, glm::vec3 value) const
 {         
-    glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value); 
+    glUniform3f(glGetUniformLocation(ID, name.c_str()), value.x, value.y, value.z); 
 }
 
 void Shader::setInt(const std::string &name, int value) const

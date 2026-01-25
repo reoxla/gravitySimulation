@@ -13,16 +13,20 @@ class celestialBody
 {
 private:
     glm::vec3 velocity; 
+    glm::vec3 position;
+    glm::vec3 testPos;
     unsigned long long mass;
 public:
     celestialBody(unsigned long long mass, glm::vec3 birthVelocity);
     void buildCircle(float radius, int vCount);
+    void applyVelocity(Shader &shader);
 };
 
 celestialBody::celestialBody(unsigned long long mass, glm::vec3 birthVelocity)
 {
     this->mass = mass;
     velocity = birthVelocity;
+    position = glm::vec3(0.0f);
 }
 
 void celestialBody::buildCircle(float radius, int vCount)
@@ -46,11 +50,23 @@ void celestialBody::buildCircle(float radius, int vCount)
     for (int i = 0; i < triangleCount; i++)
     {
         vertices.push_back(temp[0]);
-        vertices.push_back(glm::vec3(0.2f, 0.4f, 0.6f));
+        vertices.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
         vertices.push_back(temp[i + 1]);
-        vertices.push_back(glm::vec3(0.2f, 0.4f, 0.6f));
+        vertices.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
         vertices.push_back(temp[i + 2]);
-        vertices.push_back(glm::vec3(0.2f, 0.4f, 0.6f));
+        vertices.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
+    }
+}
+
+void celestialBody::applyVelocity(Shader &shader){
+    position += velocity;
+    int loc = glGetUniformLocation(shader.ID, "offset");
+    
+    if(loc != -1) {
+        glUniform3f(loc, position.x, position.y, position.z);
+    } else {
+        // If this prints, your shader doesn't have the uniform!
+        std::cout << "Uniform positionOffset not found!" << std::endl;
     }
 }
 
@@ -85,11 +101,10 @@ int main(){
     glfwGetFramebufferSize(window, &display_w, &display_h);
     glViewport(0, 0, display_w, display_h);
 
-    celestialBody planet = celestialBody(500, glm::vec3(0.0f));
-    planet.buildCircle(0.5f, 20);
+    celestialBody planet = celestialBody(500, glm::vec3(0.01f));
+    planet.buildCircle(0.5f, 200);
     
     Shader shader = Shader("shaders/shader.vs", "shaders/shader.fs");
-    shader.use();
 
     VBO vertexBufferObject = VBO();
     VAO vertexArrayObject = VAO();
@@ -101,7 +116,6 @@ int main(){
     vertexBufferObject.bufferData(sizeof(glm::vec3) * vertices.size(), &vertices[0]);
     vertexArrayObject.disable();
 
-    //glm::mat4 translationMatrix;
     vertexArrayObject.enable();
     while(!glfwWindowShouldClose(window)){
         glfwPollEvents();
@@ -110,14 +124,15 @@ int main(){
         glClear(GL_COLOR_BUFFER_BIT);
 
         vertexArrayObject.bind();
-        glDrawArrays(GL_TRIANGLES, 0, vertices.size());
+        glDrawArrays(GL_TRIANGLES, 0, vertices.size()/2);
 
-        //glm::translate(translationMatrix, glm::vec3(0.01f));
-        //vertices[0]*=translationMatrix;
+        shader.use();
+        planet.applyVelocity(shader);
 
         glfwSwapBuffers(window);
     }
 
+    glDeleteProgram(shader.ID);
     glfwTerminate();
     return 0;
 }
