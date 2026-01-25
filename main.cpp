@@ -88,7 +88,7 @@ int main(){
     celestialBody planet = celestialBody(500, glm::vec3(0.0f));
     planet.buildCircle(0.5f, 20);
     
-    Shader shader = Shader("shaders/shader.vs", "shaders/shader.fs");
+    Shader shader = Shader("shaders/shader.vs", "shaders/shader.sha");
     shader.use();
 
     VBO vertexBufferObject = VBO();
