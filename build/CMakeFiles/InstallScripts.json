@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/eren/projects/c++/gravitySimulation/build/cmake_install.cmake"
+		"/Users/eren/projects/c++/gravitySimulation/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

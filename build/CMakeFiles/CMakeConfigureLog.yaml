@@ -4,14 +4,14 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_UNAME"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: true
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
@@ -20,49 +20,71 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
       - "/usr/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
       - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
     searched_directories:
-      - "/usr/local/sbin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/uname"
+      - "/Users/eren/flutter/bin/uname"
       - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 6.18.6-arch1-1 - x86_64
+      The system is: Darwin - 22.6.0 - x86_64
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Program used to build from build.ninja files."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: true
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
@@ -73,50 +95,73 @@ events:
       - "ninja"
       - "samu"
     candidate_directories:
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
       - "/usr/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
     searched_directories:
-      - "/usr/local/sbin/ninja-build"
-      - "/usr/local/sbin/ninja"
-      - "/usr/local/sbin/samu"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/ninja-build"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/ninja"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/samu"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/ninja-build"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/ninja"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/samu"
+      - "/Users/eren/flutter/bin/ninja-build"
+      - "/Users/eren/flutter/bin/ninja"
+      - "/Users/eren/flutter/bin/samu"
       - "/usr/local/bin/ninja-build"
-      - "/usr/local/bin/ninja"
-      - "/usr/local/bin/samu"
-      - "/usr/bin/ninja-build"
-    found: "/usr/bin/ninja"
+    found: "/usr/local/bin/ninja"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: true
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
@@ -125,25 +170,35 @@ events:
     names:
       - "CMakeCCompilerId.c.in"
     candidate_directories:
-      - "/usr/share/cmake/Modules/"
-    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
+      - "/usr/local/share/cmake/Modules/"
+    found: "/usr/local/share/cmake/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
@@ -157,441 +212,743 @@ events:
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
-      The C compiler identification is Clang, found in:
-        /home/eren/projects/c++/gravitySimulation/build/CMakeFiles/4.2.2/CompilerIdC/a.out
+      The C compiler identification is AppleClang, found in:
+        /Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/4.2.1/CompilerIdC/a.out
       
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting C compiler apple sysroot: "/usr/bin/clang" "-E" "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 385 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 86 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 87 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 206 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 173 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 176 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 177 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 174 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 207 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.c" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-ar"
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-ar"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-ranlib"
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-ranlib"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-strip"
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-strip"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "ld.lld"
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/ld.lld"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-nm"
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-nm"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-objdump"
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-objdump"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-objcopy"
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-objcopy"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/usr/bin/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/objcopy"
+      - "/Users/eren/flutter/bin/objcopy"
+      - "/usr/local/bin/objcopy"
+      - "/System/Cryptexes/App/usr/bin/objcopy"
+      - "/bin/objcopy"
+      - "/usr/sbin/objcopy"
+      - "/sbin/objcopy"
+      - "/Applications/nmap.app/Contents/Resources/bin/objcopy"
+      - "/usr/local/share/dotnet/objcopy"
+      - "/Applications/ncat.app/Contents/Resources/bin/objcopy"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/objcopy"
+      - "/Users/eren/.dotnet/tools/objcopy"
+      - "/Applications/nping.app/Contents/Resources/bin/objcopy"
+      - "/Library/Apple/usr/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/objcopy"
+    found: false
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-readelf"
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-readelf"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/usr/bin/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/readelf"
+      - "/Users/eren/flutter/bin/readelf"
+      - "/usr/local/bin/readelf"
+      - "/System/Cryptexes/App/usr/bin/readelf"
+      - "/bin/readelf"
+      - "/usr/sbin/readelf"
+      - "/sbin/readelf"
+      - "/Applications/nmap.app/Contents/Resources/bin/readelf"
+      - "/usr/local/share/dotnet/readelf"
+      - "/Applications/ncat.app/Contents/Resources/bin/readelf"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/readelf"
+      - "/Users/eren/.dotnet/tools/readelf"
+      - "/Applications/nping.app/Contents/Resources/bin/readelf"
+      - "/Library/Apple/usr/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/readelf"
+    found: false
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-dlltool"
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-dlltool"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/dlltool"
+      - "/Users/eren/flutter/bin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/System/Cryptexes/App/usr/bin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/Applications/nmap.app/Contents/Resources/bin/dlltool"
+      - "/usr/local/share/dotnet/dlltool"
+      - "/Applications/ncat.app/Contents/Resources/bin/dlltool"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/dlltool"
+      - "/Users/eren/.dotnet/tools/dlltool"
+      - "/Applications/nping.app/Contents/Resources/bin/dlltool"
+      - "/Library/Apple/usr/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
+    found: false
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-addr2line"
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/usr/bin/llvm-addr2line"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/usr/bin/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/addr2line"
+      - "/Users/eren/flutter/bin/addr2line"
+      - "/usr/local/bin/addr2line"
+      - "/System/Cryptexes/App/usr/bin/addr2line"
+      - "/bin/addr2line"
+      - "/usr/sbin/addr2line"
+      - "/sbin/addr2line"
+      - "/Applications/nmap.app/Contents/Resources/bin/addr2line"
+      - "/usr/local/share/dotnet/addr2line"
+      - "/Applications/ncat.app/Contents/Resources/bin/addr2line"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/addr2line"
+      - "/Users/eren/.dotnet/tools/addr2line"
+      - "/Applications/nping.app/Contents/Resources/bin/addr2line"
+      - "/Library/Apple/usr/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/addr2line"
+    found: false
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: false
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
@@ -601,267 +958,81 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/usr/local/sbin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/tapi"
+      - "/Users/eren/flutter/bin/tapi"
       - "/usr/local/bin/tapi"
-      - "/opt/android-sdk/platform-tools/tapi"
-      - "/var/lib/flatpak/exports/bin/tapi"
-      - "/usr/lib/jvm/default/bin/tapi"
-      - "/usr/bin/site_perl/tapi"
-      - "/usr/bin/vendor_perl/tapi"
-      - "/usr/bin/core_perl/tapi"
+      - "/System/Cryptexes/App/usr/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/Applications/nmap.app/Contents/Resources/bin/tapi"
+      - "/usr/local/share/dotnet/tapi"
+      - "/Applications/ncat.app/Contents/Resources/bin/tapi"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/tapi"
+      - "/Users/eren/.dotnet/tools/tapi"
+      - "/Applications/nping.app/Contents/Resources/bin/tapi"
+      - "/Library/Apple/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
     found: false
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:2 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_AR"
-    description: "LLVM archiver"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "llvm-ar-21.1"
-      - "llvm-ar-21"
-      - "llvm-ar21"
-      - "llvm-ar"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/usr/bin/llvm-ar-21.1"
-      - "/usr/local/sbin/llvm-ar-21.1"
-      - "/usr/local/bin/llvm-ar-21.1"
-      - "/opt/android-sdk/platform-tools/llvm-ar-21.1"
-      - "/var/lib/flatpak/exports/bin/llvm-ar-21.1"
-      - "/usr/lib/jvm/default/bin/llvm-ar-21.1"
-      - "/usr/bin/site_perl/llvm-ar-21.1"
-      - "/usr/bin/vendor_perl/llvm-ar-21.1"
-      - "/usr/bin/core_perl/llvm-ar-21.1"
-      - "/usr/bin/llvm-ar-21"
-      - "/usr/local/sbin/llvm-ar-21"
-      - "/usr/local/bin/llvm-ar-21"
-      - "/opt/android-sdk/platform-tools/llvm-ar-21"
-      - "/var/lib/flatpak/exports/bin/llvm-ar-21"
-      - "/usr/lib/jvm/default/bin/llvm-ar-21"
-      - "/usr/bin/site_perl/llvm-ar-21"
-      - "/usr/bin/vendor_perl/llvm-ar-21"
-      - "/usr/bin/core_perl/llvm-ar-21"
-      - "/usr/bin/llvm-ar21"
-      - "/usr/local/sbin/llvm-ar21"
-      - "/usr/local/bin/llvm-ar21"
-      - "/opt/android-sdk/platform-tools/llvm-ar21"
-      - "/var/lib/flatpak/exports/bin/llvm-ar21"
-      - "/usr/lib/jvm/default/bin/llvm-ar21"
-      - "/usr/bin/site_perl/llvm-ar21"
-      - "/usr/bin/vendor_perl/llvm-ar21"
-      - "/usr/bin/core_perl/llvm-ar21"
-    found: "/usr/bin/llvm-ar"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:2 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_RANLIB"
-    description: "Generate index for LLVM archive"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "llvm-ranlib-21.1"
-      - "llvm-ranlib-21"
-      - "llvm-ranlib21"
-      - "llvm-ranlib"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/usr/bin/llvm-ranlib-21.1"
-      - "/usr/local/sbin/llvm-ranlib-21.1"
-      - "/usr/local/bin/llvm-ranlib-21.1"
-      - "/opt/android-sdk/platform-tools/llvm-ranlib-21.1"
-      - "/var/lib/flatpak/exports/bin/llvm-ranlib-21.1"
-      - "/usr/lib/jvm/default/bin/llvm-ranlib-21.1"
-      - "/usr/bin/site_perl/llvm-ranlib-21.1"
-      - "/usr/bin/vendor_perl/llvm-ranlib-21.1"
-      - "/usr/bin/core_perl/llvm-ranlib-21.1"
-      - "/usr/bin/llvm-ranlib-21"
-      - "/usr/local/sbin/llvm-ranlib-21"
-      - "/usr/local/bin/llvm-ranlib-21"
-      - "/opt/android-sdk/platform-tools/llvm-ranlib-21"
-      - "/var/lib/flatpak/exports/bin/llvm-ranlib-21"
-      - "/usr/lib/jvm/default/bin/llvm-ranlib-21"
-      - "/usr/bin/site_perl/llvm-ranlib-21"
-      - "/usr/bin/vendor_perl/llvm-ranlib-21"
-      - "/usr/bin/core_perl/llvm-ranlib-21"
-      - "/usr/bin/llvm-ranlib21"
-      - "/usr/local/sbin/llvm-ranlib21"
-      - "/usr/local/bin/llvm-ranlib21"
-      - "/opt/android-sdk/platform-tools/llvm-ranlib21"
-      - "/var/lib/flatpak/exports/bin/llvm-ranlib21"
-      - "/usr/lib/jvm/default/bin/llvm-ranlib21"
-      - "/usr/bin/site_perl/llvm-ranlib21"
-      - "/usr/bin/vendor_perl/llvm-ranlib21"
-      - "/usr/bin/core_perl/llvm-ranlib21"
-    found: "/usr/bin/llvm-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:2 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_CLANG_SCAN_DEPS"
-    description: "`clang-scan-deps` dependency scanner"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "clang-scan-deps-21.1"
-      - "clang-scan-deps-21"
-      - "clang-scan-deps21"
-      - "clang-scan-deps"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/usr/bin/clang-scan-deps-21.1"
-      - "/usr/local/sbin/clang-scan-deps-21.1"
-      - "/usr/local/bin/clang-scan-deps-21.1"
-      - "/opt/android-sdk/platform-tools/clang-scan-deps-21.1"
-      - "/var/lib/flatpak/exports/bin/clang-scan-deps-21.1"
-      - "/usr/lib/jvm/default/bin/clang-scan-deps-21.1"
-      - "/usr/bin/site_perl/clang-scan-deps-21.1"
-      - "/usr/bin/vendor_perl/clang-scan-deps-21.1"
-      - "/usr/bin/core_perl/clang-scan-deps-21.1"
-      - "/usr/bin/clang-scan-deps-21"
-      - "/usr/local/sbin/clang-scan-deps-21"
-      - "/usr/local/bin/clang-scan-deps-21"
-      - "/opt/android-sdk/platform-tools/clang-scan-deps-21"
-      - "/var/lib/flatpak/exports/bin/clang-scan-deps-21"
-      - "/usr/lib/jvm/default/bin/clang-scan-deps-21"
-      - "/usr/bin/site_perl/clang-scan-deps-21"
-      - "/usr/bin/vendor_perl/clang-scan-deps-21"
-      - "/usr/bin/core_perl/clang-scan-deps-21"
-      - "/usr/bin/clang-scan-deps21"
-      - "/usr/local/sbin/clang-scan-deps21"
-      - "/usr/local/bin/clang-scan-deps21"
-      - "/opt/android-sdk/platform-tools/clang-scan-deps21"
-      - "/var/lib/flatpak/exports/bin/clang-scan-deps21"
-      - "/usr/lib/jvm/default/bin/clang-scan-deps21"
-      - "/usr/bin/site_perl/clang-scan-deps21"
-      - "/usr/bin/vendor_perl/clang-scan-deps21"
-      - "/usr/bin/core_perl/clang-scan-deps21"
-    found: "/usr/bin/clang-scan-deps"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
       CMAKE_FIND_USE_CMAKE_PATH: true
       CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
@@ -870,25 +1041,35 @@ events:
     names:
       - "CMakeCXXCompilerId.cpp.in"
     candidate_directories:
-      - "/usr/share/cmake/Modules/"
-    found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+      - "/usr/local/share/cmake/Modules/"
+    found: "/usr/local/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
@@ -902,622 +1083,471 @@ events:
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
-      The CXX compiler identification is Clang, found in:
-        /home/eren/projects/c++/gravitySimulation/build/CMakeFiles/4.2.2/CompilerIdCXX/a.out
+      The CXX compiler identification is AppleClang, found in:
+        /Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/4.2.1/CompilerIdCXX/a.out
       
   -
-    kind: "find-v1"
+    kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER_AR"
-    description: "LLVM archiver"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "llvm-ar-21.1"
-      - "llvm-ar-21"
-      - "llvm-ar21"
-      - "llvm-ar"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/usr/bin/llvm-ar-21.1"
-      - "/usr/local/sbin/llvm-ar-21.1"
-      - "/usr/local/bin/llvm-ar-21.1"
-      - "/opt/android-sdk/platform-tools/llvm-ar-21.1"
-      - "/var/lib/flatpak/exports/bin/llvm-ar-21.1"
-      - "/usr/lib/jvm/default/bin/llvm-ar-21.1"
-      - "/usr/bin/site_perl/llvm-ar-21.1"
-      - "/usr/bin/vendor_perl/llvm-ar-21.1"
-      - "/usr/bin/core_perl/llvm-ar-21.1"
-      - "/usr/bin/llvm-ar-21"
-      - "/usr/local/sbin/llvm-ar-21"
-      - "/usr/local/bin/llvm-ar-21"
-      - "/opt/android-sdk/platform-tools/llvm-ar-21"
-      - "/var/lib/flatpak/exports/bin/llvm-ar-21"
-      - "/usr/lib/jvm/default/bin/llvm-ar-21"
-      - "/usr/bin/site_perl/llvm-ar-21"
-      - "/usr/bin/vendor_perl/llvm-ar-21"
-      - "/usr/bin/core_perl/llvm-ar-21"
-      - "/usr/bin/llvm-ar21"
-      - "/usr/local/sbin/llvm-ar21"
-      - "/usr/local/bin/llvm-ar21"
-      - "/opt/android-sdk/platform-tools/llvm-ar21"
-      - "/var/lib/flatpak/exports/bin/llvm-ar21"
-      - "/usr/lib/jvm/default/bin/llvm-ar21"
-      - "/usr/bin/site_perl/llvm-ar21"
-      - "/usr/bin/vendor_perl/llvm-ar21"
-      - "/usr/bin/core_perl/llvm-ar21"
-    found: "/usr/bin/llvm-ar"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+    message: |
+      Detecting CXX compiler apple sysroot: "/usr/bin/clang++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 400 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 86 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 87 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 206 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 173 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 176 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 177 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 174 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 207 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/usr/local/share/cmake/Modules/Platform/Darwin.cmake:76 (find_program)"
+      - "/usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
-    variable: "CMAKE_CXX_COMPILER_RANLIB"
-    description: "Generate index for LLVM archive"
+    variable: "CMAKE_INSTALL_NAME_TOOL"
+    description: "Path to a program."
     settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "llvm-ranlib-21.1"
-      - "llvm-ranlib-21"
-      - "llvm-ranlib21"
-      - "llvm-ranlib"
+      - "install_name_tool"
     candidate_directories:
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/Users/eren/flutter/bin/"
       - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/nmap.app/Contents/Resources/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Applications/ncat.app/Contents/Resources/bin/"
+      - "/Applications/Zenmap.app/Contents/Resources/bin/"
+      - "/Users/eren/.dotnet/tools/"
+      - "/Applications/nping.app/Contents/Resources/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
     searched_directories:
-      - "/usr/bin/llvm-ranlib-21.1"
-      - "/usr/local/sbin/llvm-ranlib-21.1"
-      - "/usr/local/bin/llvm-ranlib-21.1"
-      - "/opt/android-sdk/platform-tools/llvm-ranlib-21.1"
-      - "/var/lib/flatpak/exports/bin/llvm-ranlib-21.1"
-      - "/usr/lib/jvm/default/bin/llvm-ranlib-21.1"
-      - "/usr/bin/site_perl/llvm-ranlib-21.1"
-      - "/usr/bin/vendor_perl/llvm-ranlib-21.1"
-      - "/usr/bin/core_perl/llvm-ranlib-21.1"
-      - "/usr/bin/llvm-ranlib-21"
-      - "/usr/local/sbin/llvm-ranlib-21"
-      - "/usr/local/bin/llvm-ranlib-21"
-      - "/opt/android-sdk/platform-tools/llvm-ranlib-21"
-      - "/var/lib/flatpak/exports/bin/llvm-ranlib-21"
-      - "/usr/lib/jvm/default/bin/llvm-ranlib-21"
-      - "/usr/bin/site_perl/llvm-ranlib-21"
-      - "/usr/bin/vendor_perl/llvm-ranlib-21"
-      - "/usr/bin/core_perl/llvm-ranlib-21"
-      - "/usr/bin/llvm-ranlib21"
-      - "/usr/local/sbin/llvm-ranlib21"
-      - "/usr/local/bin/llvm-ranlib21"
-      - "/opt/android-sdk/platform-tools/llvm-ranlib21"
-      - "/var/lib/flatpak/exports/bin/llvm-ranlib21"
-      - "/usr/lib/jvm/default/bin/llvm-ranlib21"
-      - "/usr/bin/site_perl/llvm-ranlib21"
-      - "/usr/bin/vendor_perl/llvm-ranlib21"
-      - "/usr/bin/core_perl/llvm-ranlib21"
-    found: "/usr/bin/llvm-ranlib"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/install_name_tool"
+      - "/Users/eren/flutter/bin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
-        - "/usr/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/eren/flutter/bin"
         - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
         - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:2 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS"
-    description: "`clang-scan-deps` dependency scanner"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "clang-scan-deps-21.1"
-      - "clang-scan-deps-21"
-      - "clang-scan-deps21"
-      - "clang-scan-deps"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/opt/android-sdk/platform-tools/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/usr/bin/clang-scan-deps-21.1"
-      - "/usr/local/sbin/clang-scan-deps-21.1"
-      - "/usr/local/bin/clang-scan-deps-21.1"
-      - "/opt/android-sdk/platform-tools/clang-scan-deps-21.1"
-      - "/var/lib/flatpak/exports/bin/clang-scan-deps-21.1"
-      - "/usr/lib/jvm/default/bin/clang-scan-deps-21.1"
-      - "/usr/bin/site_perl/clang-scan-deps-21.1"
-      - "/usr/bin/vendor_perl/clang-scan-deps-21.1"
-      - "/usr/bin/core_perl/clang-scan-deps-21.1"
-      - "/usr/bin/clang-scan-deps-21"
-      - "/usr/local/sbin/clang-scan-deps-21"
-      - "/usr/local/bin/clang-scan-deps-21"
-      - "/opt/android-sdk/platform-tools/clang-scan-deps-21"
-      - "/var/lib/flatpak/exports/bin/clang-scan-deps-21"
-      - "/usr/lib/jvm/default/bin/clang-scan-deps-21"
-      - "/usr/bin/site_perl/clang-scan-deps-21"
-      - "/usr/bin/vendor_perl/clang-scan-deps-21"
-      - "/usr/bin/core_perl/clang-scan-deps-21"
-      - "/usr/bin/clang-scan-deps21"
-      - "/usr/local/sbin/clang-scan-deps21"
-      - "/usr/local/bin/clang-scan-deps21"
-      - "/opt/android-sdk/platform-tools/clang-scan-deps21"
-      - "/var/lib/flatpak/exports/bin/clang-scan-deps21"
-      - "/usr/lib/jvm/default/bin/clang-scan-deps21"
-      - "/usr/bin/site_perl/clang-scan-deps21"
-      - "/usr/bin/vendor_perl/clang-scan-deps21"
-      - "/usr/bin/core_perl/clang-scan-deps21"
-    found: "/usr/bin/clang-scan-deps"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/opt/android-sdk/platform-tools"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Applications/nmap.app/Contents/Resources/bin"
+        - "/usr/local/share/dotnet"
+        - "/Applications/ncat.app/Contents/Resources/bin"
+        - "/Applications/zenmap.app/Contents/Resources/bin"
+        - "~/.dotnet/tools"
+        - "/Applications/nping.app/Contents/Resources/bin"
+        - "/Library/Apple/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC"
-      binary: "/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC"
+      source: "/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ"
+      binary: "/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ"
     cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC'
+        Change Dir: '/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_d65be
-        [1/2] /usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
-        clang version 21.1.6
-        Target: x86_64-pc-linux-gnu
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_f0b69
+        [1/2] /usr/bin/clang   -v -Wl,-v -MD -MT CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
+        Apple clang version 15.0.0 (clang-1500.1.0.2.5)
+        Target: x86_64-apple-darwin22.6.0
         Thread model: posix
-        InstalledDir: /usr/bin
-        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1
-        Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Candidate multilib: .;@m64
-        Candidate multilib: 32;@m32
-        Selected multilib: .;@m64
-         (in-process)
-         "/usr/bin/clang-21" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC -v -fcoverage-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC -resource-dir /usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake/Modules/CMakeCCompilerABI.c
-        clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target x86_64-pc-linux-gnu
-        ignoring nonexistent directory "/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include"
-        ignoring nonexistent directory "/include"
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=14.2 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 15.0.0 (clang-1500.1.0.2.5) default target x86_64-apple-darwin22.6.0
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/lib/clang/21/include
          /usr/local/include
-         /usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        [2/2] : && /usr/bin/clang  -v -Wl,-v CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -o cmTC_d65be   && :
-        clang version 21.1.6
-        Target: x86_64-pc-linux-gnu
+        [2/2] : && /usr/bin/clang  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -o cmTC_f0b69   && :
+        Apple clang version 15.0.0 (clang-1500.1.0.2.5)
+        Target: x86_64-apple-darwin22.6.0
         Thread model: posix
-        InstalledDir: /usr/bin
-        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1
-        Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Candidate multilib: .;@m64
-        Candidate multilib: 32;@m32
-        Selected multilib: .;@m64
-         "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d65be /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o
-        GNU ld (GNU Binutils) 2.45.1
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.0.0 14.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_f0b69 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:dyld-1022.1
+        BUILD 05:26:33 Dec  7 2023
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h
+        will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.8)
+        Library search paths:
+        	/usr/local/lib
+        Framework search paths:
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "x86_64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/lib/clang/21/include]
           add: [/usr/local/include]
-          add: [/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         end of search list found
-        collapse include dir [/usr/lib/clang/21/include] ==> [/usr/lib/clang/21/include]
         collapse include dir [/usr/local/include] ==> [/usr/local/include]
-        collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/usr/lib/clang/21/include;/usr/local/include;/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC']
+        ignore line: [Change Dir: '/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_d65be]
-        ignore line: [[1/2] /usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
-        ignore line: [clang version 21.1.6]
-        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Run Build Command(s): /usr/local/bin/ninja -v cmTC_f0b69]
+        ignore line: [[1/2] /usr/bin/clang   -v -Wl -v -MD -MT CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.1.0.2.5)]
+        ignore line: [Target: x86_64-apple-darwin22.6.0]
         ignore line: [Thread model: posix]
-        ignore line: [InstalledDir: /usr/bin]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Candidate multilib: .]
-        ignore line: [@m64]
-        ignore line: [Candidate multilib: 32]
-        ignore line: [@m32]
-        ignore line: [Selected multilib: .]
-        ignore line: [@m64]
-        ignore line: [ (in-process)]
-        ignore line: [ "/usr/bin/clang-21" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC -v -fcoverage-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-hMRNpC -resource-dir /usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
-        ignore line: [clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target x86_64-pc-linux-gnu]
-        ignore line: [ignoring nonexistent directory "/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include"]
-        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=14.2 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-aTblXJ -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 15.0.0 (clang-1500.1.0.2.5) default target x86_64-apple-darwin22.6.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/lib/clang/21/include]
         ignore line: [ /usr/local/include]
-        ignore line: [ /usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /usr/bin/clang  -v -Wl -v CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -o cmTC_d65be   && :]
-        ignore line: [clang version 21.1.6]
-        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [[2/2] : && /usr/bin/clang  -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -o cmTC_f0b69   && :]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.1.0.2.5)]
+        ignore line: [Target: x86_64-apple-darwin22.6.0]
         ignore line: [Thread model: posix]
-        ignore line: [InstalledDir: /usr/bin]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Candidate multilib: .]
-        ignore line: [@m64]
-        ignore line: [Candidate multilib: 32]
-        ignore line: [@m32]
-        ignore line: [Selected multilib: .]
-        ignore line: [@m64]
-        link line: [ "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d65be /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o]
-          arg [/usr/bin/ld] ==> ignore
-          arg [--hash-style=gnu] ==> ignore
-          arg [--build-id] ==> ignore
-          arg [--eh-frame-hdr] ==> ignore
-          arg [-m] ==> ignore
-          arg [elf_x86_64] ==> ignore
-          arg [-pie] ==> ignore
-          arg [-dynamic-linker] ==> ignore
-          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.0.0 14.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_f0b69 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [13.0.0] ==> ignore
+          arg [14.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_d65be] ==> ignore
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o]
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o]
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
-          arg [-L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1] ==> dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-          arg [-L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64] ==> dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64]
-          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
-          arg [-L/usr/lib64] ==> dir [/usr/lib64]
-          arg [-L/lib] ==> dir [/lib]
-          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [cmTC_f0b69] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_d65be.dir/CMakeCCompilerABI.c.o] ==> ignore
-          arg [-lgcc] ==> lib [gcc]
-          arg [--as-needed] ==> ignore
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [--no-as-needed] ==> ignore
-          arg [-lc] ==> lib [c]
-          arg [-lgcc] ==> lib [gcc]
-          arg [--as-needed] ==> ignore
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [--no-as-needed] ==> ignore
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o]
-        linker tool for 'C': /usr/bin/ld
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o] ==> [/usr/lib64/Scrt1.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
-        collapse library dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1] ==> [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        collapse library dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64] ==> [/usr/lib64]
-        collapse library dir [/lib/../lib64] ==> [/lib64]
-        collapse library dir [/usr/lib64] ==> [/usr/lib64]
-        collapse library dir [/lib] ==> [/lib]
-        collapse library dir [/usr/lib] ==> [/usr/lib]
-        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-        implicit objs: [/usr/lib64/Scrt1.o;/usr/lib64/crti.o;/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o;/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o;/usr/lib64/crtn.o]
-        implicit dirs: [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1;/usr/lib64;/lib64;/lib;/usr/lib]
+          arg [CMakeFiles/cmTC_f0b69.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/usr/local/lib]
+        remove lib [System]
+        remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/usr/local/lib]
         implicit fwks: []
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      Running the C compiler's linker: "/usr/bin/ld" "-v"
-      GNU ld (GNU Binutils) 2.45.1
+      Running the C compiler's linker: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld  PROJECT:dyld-1022.1
+      BUILD 05:26:33 Dec  7 2023
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h
+      will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.8)
+      Library search paths:
+      Framework search paths:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
-      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq"
-      binary: "/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq"
+      source: "/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu"
+      binary: "/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu"
     cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps"
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq'
+        Change Dir: '/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_8bbb9
-        [1/2] /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-        clang version 21.1.6
-        Target: x86_64-pc-linux-gnu
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_19c95
+        [1/2] /usr/bin/clang++   -v -Wl,-v -MD -MT CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Apple clang version 15.0.0 (clang-1500.1.0.2.5)
+        Target: x86_64-apple-darwin22.6.0
         Thread model: posix
-        InstalledDir: /usr/bin
-        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1
-        Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Candidate multilib: .;@m64
-        Candidate multilib: 32;@m32
-        Selected multilib: .;@m64
-         (in-process)
-         "/usr/bin/clang++" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq -v -fcoverage-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq -resource-dir /usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/backward -internal-isystem /usr/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-        clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target x86_64-pc-linux-gnu
-        ignoring nonexistent directory "/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include"
-        ignoring nonexistent directory "/include"
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=14.2 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 15.0.0 (clang-1500.1.0.2.5) default target x86_64-apple-darwin22.6.0
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1
-         /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/x86_64-pc-linux-gnu
-         /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/backward
-         /usr/lib/clang/21/include
          /usr/local/include
-         /usr/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        [2/2] : && /usr/bin/clang++  -v -Wl,-v CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8bbb9   && :
-        clang version 21.1.6
-        Target: x86_64-pc-linux-gnu
+        [2/2] : && /usr/bin/clang++  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_19c95   && :
+        Apple clang version 15.0.0 (clang-1500.1.0.2.5)
+        Target: x86_64-apple-darwin22.6.0
         Thread model: posix
-        InstalledDir: /usr/bin
-        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1
-        Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1
-        Candidate multilib: .;@m64
-        Candidate multilib: 32;@m32
-        Selected multilib: .;@m64
-         "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8bbb9 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o
-        GNU ld (GNU Binutils) 2.45.1
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.0.0 14.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_19c95 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:dyld-1022.1
+        BUILD 05:26:33 Dec  7 2023
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h
+        will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.8)
+        Library search paths:
+        	/usr/local/lib
+        Framework search paths:
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "x86_64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1]
-          add: [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/x86_64-pc-linux-gnu]
-          add: [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/backward]
-          add: [/usr/lib/clang/21/include]
           add: [/usr/local/include]
-          add: [/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         end of search list found
-        collapse include dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1] ==> [/usr/include/c++/15.2.1]
-        collapse include dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/x86_64-pc-linux-gnu] ==> [/usr/include/c++/15.2.1/x86_64-pc-linux-gnu]
-        collapse include dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/backward] ==> [/usr/include/c++/15.2.1/backward]
-        collapse include dir [/usr/lib/clang/21/include] ==> [/usr/lib/clang/21/include]
         collapse include dir [/usr/local/include] ==> [/usr/local/include]
-        collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/usr/include/c++/15.2.1;/usr/include/c++/15.2.1/x86_64-pc-linux-gnu;/usr/include/c++/15.2.1/backward;/usr/lib/clang/21/include;/usr/local/include;/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq']
+        ignore line: [Change Dir: '/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_8bbb9]
-        ignore line: [[1/2] /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-        ignore line: [clang version 21.1.6]
-        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Run Build Command(s): /usr/local/bin/ninja -v cmTC_19c95]
+        ignore line: [[1/2] /usr/bin/clang++   -v -Wl -v -MD -MT CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.1.0.2.5)]
+        ignore line: [Target: x86_64-apple-darwin22.6.0]
         ignore line: [Thread model: posix]
-        ignore line: [InstalledDir: /usr/bin]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Candidate multilib: .]
-        ignore line: [@m64]
-        ignore line: [Candidate multilib: 32]
-        ignore line: [@m32]
-        ignore line: [Selected multilib: .]
-        ignore line: [@m64]
-        ignore line: [ (in-process)]
-        ignore line: [ "/usr/bin/clang++" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq -v -fcoverage-compilation-dir=/home/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-jE0tnq -resource-dir /usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/backward -internal-isystem /usr/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-        ignore line: [clang -cc1 version 21.1.6 based upon LLVM 21.1.6 default target x86_64-pc-linux-gnu]
-        ignore line: [ignoring nonexistent directory "/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../x86_64-pc-linux-gnu/include"]
-        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=14.2 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/eren/projects/c++/gravitySimulation/build/CMakeFiles/CMakeScratch/TryCompile-ltWMzu -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 15.0.0 (clang-1500.1.0.2.5) default target x86_64-apple-darwin22.6.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1]
-        ignore line: [ /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/x86_64-pc-linux-gnu]
-        ignore line: [ /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/backward]
-        ignore line: [ /usr/lib/clang/21/include]
         ignore line: [ /usr/local/include]
-        ignore line: [ /usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /usr/bin/clang++  -v -Wl -v CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8bbb9   && :]
-        ignore line: [clang version 21.1.6]
-        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [[2/2] : && /usr/bin/clang++  -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_19c95   && :]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.1.0.2.5)]
+        ignore line: [Target: x86_64-apple-darwin22.6.0]
         ignore line: [Thread model: posix]
-        ignore line: [InstalledDir: /usr/bin]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Found candidate GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Selected GCC installation: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        ignore line: [Candidate multilib: .]
-        ignore line: [@m64]
-        ignore line: [Candidate multilib: 32]
-        ignore line: [@m32]
-        ignore line: [Selected multilib: .]
-        ignore line: [@m64]
-        link line: [ "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8bbb9 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o]
-          arg [/usr/bin/ld] ==> ignore
-          arg [--hash-style=gnu] ==> ignore
-          arg [--build-id] ==> ignore
-          arg [--eh-frame-hdr] ==> ignore
-          arg [-m] ==> ignore
-          arg [elf_x86_64] ==> ignore
-          arg [-pie] ==> ignore
-          arg [-dynamic-linker] ==> ignore
-          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.0.0 14.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_19c95 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [13.0.0] ==> ignore
+          arg [14.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_8bbb9] ==> ignore
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o]
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o]
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
-          arg [-L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1] ==> dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-          arg [-L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64] ==> dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64]
-          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
-          arg [-L/usr/lib64] ==> dir [/usr/lib64]
-          arg [-L/lib] ==> dir [/lib]
-          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [cmTC_19c95] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_8bbb9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-          arg [-lstdc++] ==> lib [stdc++]
-          arg [-lm] ==> lib [m]
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lc] ==> lib [c]
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [-lgcc] ==> lib [gcc]
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
-          arg [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o] ==> obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o]
-        linker tool for 'CXX': /usr/bin/ld
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/Scrt1.o] ==> [/usr/lib64/Scrt1.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
-        collapse obj [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
-        collapse library dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1] ==> [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1]
-        collapse library dir [/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib64] ==> [/usr/lib64]
-        collapse library dir [/lib/../lib64] ==> [/lib64]
-        collapse library dir [/usr/lib64] ==> [/usr/lib64]
-        collapse library dir [/lib] ==> [/lib]
-        collapse library dir [/usr/lib] ==> [/usr/lib]
-        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-        implicit objs: [/usr/lib64/Scrt1.o;/usr/lib64/crti.o;/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o;/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o;/usr/lib64/crtn.o]
-        implicit dirs: [/usr/lib64/gcc/x86_64-pc-linux-gnu/15.2.1;/usr/lib64;/lib64;/lib;/usr/lib]
+          arg [CMakeFiles/cmTC_19c95.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/usr/local/lib]
+        remove lib [System]
+        remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/usr/local/lib]
         implicit fwks: []
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
-      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/local/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
-      GNU ld (GNU Binutils) 2.45.1
+      Running the CXX compiler's linker: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld  PROJECT:dyld-1022.1
+      BUILD 05:26:33 Dec  7 2023
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h
+      will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.8)
+      Library search paths:
+      Framework search paths:
 ...

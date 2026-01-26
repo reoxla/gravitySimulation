@@ -50,11 +50,11 @@ void celestialBody::buildCircle(float radius, int vCount)
     for (int i = 0; i < triangleCount; i++)
     {
         vertices.push_back(temp[0]);
-        vertices.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
+        vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
         vertices.push_back(temp[i + 1]);
-        vertices.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
+        vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
         vertices.push_back(temp[i + 2]);
-        vertices.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
+        vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
     }
 }
 
@@ -65,7 +65,7 @@ void celestialBody::applyVelocity(Shader &shader){
     if(loc != -1) {
         glUniform3f(loc, position.x, position.y, position.z);
     } else {
-        // If this prints, your shader doesn't have the uniform!
+        
         std::cout << "Uniform positionOffset not found!" << std::endl;
     }
 }
@@ -77,13 +77,15 @@ int main(){
         std::cout << "failed init";
         return -1;
     }
+    float zoom = 5.0f;
+    float aspectRatio = 1.6f;
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
-    GLFWwindow* window = glfwCreateWindow(800, 800, "window", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1280, 800, "window", NULL, NULL);
     
     if(!window){
         glfwTerminate();
@@ -97,14 +99,10 @@ int main(){
         return -1;
     }
 
-    int display_w, display_h;
-    glfwGetFramebufferSize(window, &display_w, &display_h);
-    glViewport(0, 0, display_w, display_h);
-
-    celestialBody planet = celestialBody(500, glm::vec3(0.01f));
-    planet.buildCircle(0.5f, 200);
+    celestialBody planet = celestialBody(500, glm::vec3(0.005f));
+    planet.buildCircle(0.5f, 100);
     
-    Shader shader = Shader("shaders/shader.vs", "shaders/shader.fs");
+    Shader shader = Shader("../shaders/shader.vs", "../shaders/shader.fs");
     shader.use();
 
     VBO vertexBufferObject = VBO();
@@ -118,6 +116,7 @@ int main(){
     vertexArrayObject.disable();
 
     vertexArrayObject.enable();
+
     while(!glfwWindowShouldClose(window)){
         glfwPollEvents();
         
@@ -128,6 +127,19 @@ int main(){
         glDrawArrays(GL_TRIANGLES, 0, vertices.size()/2);
 
         shader.use();
+        int display_w, display_h;
+        glfwGetFramebufferSize(window, &display_w, &display_h);
+        glViewport(0, 0, display_w, display_h);
+
+        float currentAspect = (float)display_w / (float)display_h;
+
+        glm::mat4 projectionMatrix = glm::ortho(-zoom * currentAspect, zoom * currentAspect, -zoom, zoom, -1.0f, 1.0f);
+        int projLocation = glGetUniformLocation(shader.ID, "projection");
+        if(projLocation == -1) {
+            std::cout << "CRITICAL: Uniform 'projection' not found!" << std::endl;
+        }
+        glUniformMatrix4fv(projLocation, 1, GL_FALSE, &projectionMatrix[0][0]);
+        
         planet.applyVelocity(shader);
 
         glfwSwapBuffers(window);
