@@ -17,20 +17,16 @@ private:
     glm::vec3 testPos;
     unsigned long long mass;
 public:
-    celestialBody(unsigned long long mass, glm::vec3 birthVelocity);
-    void buildCircle(float radius, int vCount);
+    celestialBody(unsigned long long mass, glm::vec3 birthVelocity, float radius, int vCount, glm::vec3 initialPos);
     void applyVelocity(Shader &shader);
 };
 
-celestialBody::celestialBody(unsigned long long mass, glm::vec3 birthVelocity)
+celestialBody::celestialBody(unsigned long long mass, glm::vec3 birthVelocity, float radius, int vCount, glm::vec3 initialPos)
 {
     this->mass = mass;
     velocity = birthVelocity;
-    position = glm::vec3(0.0f);
-}
+    position = initialPos;
 
-void celestialBody::buildCircle(float radius, int vCount)
-{
     float angle = 360.0f / vCount;
 
     int triangleCount = vCount - 2;
@@ -49,11 +45,11 @@ void celestialBody::buildCircle(float radius, int vCount)
     // triangles
     for (int i = 0; i < triangleCount; i++)
     {
-        vertices.push_back(temp[0]);
+        vertices.push_back(position + temp[0]);
         vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
-        vertices.push_back(temp[i + 1]);
+        vertices.push_back(position + temp[i + 1]);
         vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
-        vertices.push_back(temp[i + 2]);
+        vertices.push_back(position + temp[i + 2]);
         vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
     }
 }
@@ -70,7 +66,6 @@ void celestialBody::applyVelocity(Shader &shader){
     }
 }
 
-void buildCircle(float radius, int vCount);
 int main(){
     if (!glfwInit())
     {
@@ -99,8 +94,8 @@ int main(){
         return -1;
     }
 
-    celestialBody planet = celestialBody(500, glm::vec3(0.005f));
-    planet.buildCircle(0.5f, 100);
+    celestialBody planet1 = celestialBody(500, glm::vec3(0.08f), 0.5f, 100, glm::vec3(0.0f));
+    celestialBody planet2 = celestialBody(500, glm::vec3(0.0f), 0.5f, 100, glm::vec3(2.0f, 0.0f, 0.0f));
     
     Shader shader = Shader("../shaders/shader.vs", "../shaders/shader.fs");
     shader.use();
@@ -140,7 +135,8 @@ int main(){
         }
         glUniformMatrix4fv(projLocation, 1, GL_FALSE, &projectionMatrix[0][0]);
         
-        planet.applyVelocity(shader);
+        planet1.applyVelocity(shader);
+        planet2.applyVelocity(shader);
 
         glfwSwapBuffers(window);
     }
