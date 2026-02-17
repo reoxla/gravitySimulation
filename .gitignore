@@ -42,3 +42,45 @@ build
 # debug information files
 *.dwo
 /.vs/Gravity/CopilotIndices/18.3.502.33069
+
+# --- Visual Studio Temporary Files ---
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- Build Output Directories ---
+# These contain the .exe, .obj, and .pdb files
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+bin/
+obj/
+
+# --- Intermediate Build Files ---
+*.pdb
+*.idb
+*.ilk
+*.exe
+*.dll
+*.lib
+*.sbr
+*.obj
+*.tlog
+*.lastbuildstate
+*.recipe
+
+# --- Visual Studio Database & Cache ---
+*.sdf
+*.opensdf
+*.ipch
+*.VC.db
+*.VC.opendb
+
+# --- External Libraries (Keep your repo light) ---
+# If you use a folder named 'external' or 'lib' for dependencies, 
+# you might want to ignore them and use a package manager like vcpkg instead.
+# external/

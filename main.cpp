@@ -94,10 +94,10 @@ int main(){
         return -1;
     }
 
-    celestialBody planet1 = celestialBody(500, glm::vec3(0.08f), 0.5f, 100, glm::vec3(0.0f));
+    celestialBody planet1 = celestialBody(500, glm::vec3(0.06f), 0.5f, 100, glm::vec3(0.0f));
     celestialBody planet2 = celestialBody(500, glm::vec3(0.0f), 0.5f, 100, glm::vec3(2.0f, 0.0f, 0.0f));
     
-    Shader shader = Shader("../shaders/shader.vs", "../shaders/shader.fs");
+    Shader shader = Shader("shaders/shader.vs", "shaders/shader.fs");
     shader.use();
 
     VBO vertexBufferObject = VBO();
