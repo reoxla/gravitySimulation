@@ -41,3 +41,4 @@ build
 
 # debug information files
 *.dwo
+/.vs/Gravity/CopilotIndices/18.3.502.33069
