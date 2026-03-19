@@ -1,70 +1,21 @@
+#define GLFW_INCLUDE_NONE
+#define HoldOrPress (action == GLFW_PRESS || action == GLFW_REPEAT)
 #include <iostream>
 #include <vector>
+#include "src/glad.h"
 #include "src/glm/glm.hpp"
 #include "src/glm/gtc/matrix_transform.hpp"
-#include "src/glad.h"
 #include "src/buffers.h"
 #include "src/shaders.h"
+#include "celestialBody.h"
 #include <GLFW/glfw3.h>
 
-std::vector<glm::vec3> vertices;
+float zoom = 40.0f;
+float zoomSpeed = 0.2f;
+glm::vec3 cameraPos = glm::vec3(-50.0f, 0.0f, 0.0f);
+float cameraSpeed = 0.2f;
 
-class celestialBody
-{
-private:
-    glm::vec3 velocity; 
-    glm::vec3 position;
-    glm::vec3 testPos;
-    unsigned long long mass;
-public:
-    celestialBody(unsigned long long mass, glm::vec3 birthVelocity, float radius, int vCount, glm::vec3 initialPos);
-    void applyVelocity(Shader &shader);
-};
-
-celestialBody::celestialBody(unsigned long long mass, glm::vec3 birthVelocity, float radius, int vCount, glm::vec3 initialPos)
-{
-    this->mass = mass;
-    velocity = birthVelocity;
-    position = initialPos;
-
-    float angle = 360.0f / vCount;
-
-    int triangleCount = vCount - 2;
-
-    std::vector<glm::vec3> temp;
-    // positions
-    for (int i = 0; i < vCount; i++)
-    {
-        float currentAngle = angle * i;
-        float x = radius * cos(glm::radians(currentAngle));
-        float y = radius * sin(glm::radians(currentAngle));
-        float z = 0.0f;
-
-        temp.push_back(glm::vec3(x, y, z));
-    }
-    // triangles
-    for (int i = 0; i < triangleCount; i++)
-    {
-        vertices.push_back(position + temp[0]);
-        vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
-        vertices.push_back(position + temp[i + 1]);
-        vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
-        vertices.push_back(position + temp[i + 2]);
-        vertices.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
-    }
-}
-
-void celestialBody::applyVelocity(Shader &shader){
-    position += velocity;
-    int loc = glGetUniformLocation(shader.ID, "offset");
-    
-    if(loc != -1) {
-        glUniform3f(loc, position.x, position.y, position.z);
-    } else {
-        
-        std::cout << "Uniform positionOffset not found!" << std::endl;
-    }
-}
+void keycallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 int main(){
     if (!glfwInit())
@@ -72,7 +23,6 @@ int main(){
         std::cout << "failed init";
         return -1;
     }
-    float zoom = 5.0f;
     float aspectRatio = 1.6f;
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -94,10 +44,14 @@ int main(){
         return -1;
     }
 
-    celestialBody planet1 = celestialBody(500, glm::vec3(0.06f), 0.5f, 100, glm::vec3(0.0f));
-    celestialBody planet2 = celestialBody(500, glm::vec3(0.0f), 0.5f, 100, glm::vec3(2.0f, 0.0f, 0.0f));
-    
+	generateCircleTemplate(200, 0.06f);
+    std::vector<celestialBody> plantets = {
+        celestialBody(50, glm::vec3(0.0f), glm::vec3(0.0f), glm::vec3(3.0f), 1),
+        celestialBody(50, glm::vec3(0.0f), glm::vec3(50.0f, 0.0f, 0.0f), glm::vec3(9.0f), 2)
+	};  
+       
     Shader shader = Shader("shaders/shader.vs", "shaders/shader.fs");
+
     shader.use();
 
     VBO vertexBufferObject = VBO();
@@ -107,19 +61,19 @@ int main(){
     vertexArrayObject.bind();
     
     vertexArrayObject.attribPointer(vertexBufferObject);
-    vertexBufferObject.bufferData(sizeof(glm::vec3) * vertices.size(), &vertices[0]);
+    vertexBufferObject.bufferData(sizeof(glm::vec3) * circleTemplate.size(), &circleTemplate[0]);
     vertexArrayObject.disable();
 
     vertexArrayObject.enable();
 
     while(!glfwWindowShouldClose(window)){
         glfwPollEvents();
-        
+		glfwSetKeyCallback(window, keycallback);
+
         glClearColor(0.5f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         vertexArrayObject.bind();
-        glDrawArrays(GL_TRIANGLES, 0, vertices.size()/2);
 
         shader.use();
         int display_w, display_h;
@@ -129,14 +83,43 @@ int main(){
         float currentAspect = (float)display_w / (float)display_h;
 
         glm::mat4 projectionMatrix = glm::ortho(-zoom * currentAspect, zoom * currentAspect, -zoom, zoom, -1.0f, 1.0f);
-        int projLocation = glGetUniformLocation(shader.ID, "projection");
-        if(projLocation == -1) {
-            std::cout << "CRITICAL: Uniform 'projection' not found!" << std::endl;
+
+		int transformLocation = glGetUniformLocation(shader.ID, "transform");
+		if (transformLocation == -1) {
+            std::cout << "CRITICAL: Uniform 'transform' not found!" << std::endl;
         }
-        glUniformMatrix4fv(projLocation, 1, GL_FALSE, &projectionMatrix[0][0]);
+
+		glm::mat4 transformationMatrix = glm::mat4(1.0f);
+
+        transformationMatrix = glm::translate(transformationMatrix, plantets[0].position);
+        transformationMatrix = glm::translate(transformationMatrix, cameraPos);
+        transformationMatrix = glm::scale(transformationMatrix, plantets[0].radius);
+        plantets[0].applyGravity(plantets);
+        plantets[0].applyVelocity(shader);
+		transformationMatrix = projectionMatrix * transformationMatrix;
+		glUniformMatrix4fv(transformLocation, 1, GL_FALSE, &transformationMatrix[0][0]);
+
+		glDrawArrays(GL_TRIANGLES, 0, circleTemplate.size()/2);
+
+
+        transformationMatrix = glm::mat4(1.0f);
+
+        transformationMatrix = glm::translate(transformationMatrix, plantets[1].position);
+        transformationMatrix = glm::translate(transformationMatrix, cameraPos);
+        transformationMatrix = glm::scale(transformationMatrix, plantets[1].radius);
+        plantets[1].applyGravity(plantets);
+        plantets[1].applyVelocity(shader);
+        transformationMatrix = projectionMatrix * transformationMatrix;
+        glUniformMatrix4fv(transformLocation, 1, GL_FALSE, &transformationMatrix[0][0]);
+
+        for each(celestialBody body in plantets)
+        {
+            printf("position: %f, %f, %f\n", body.position.x, body.position.y, body.position.z);
+            printf("velocity: %f, %f, %f\n", body.velocity.x, body.velocity.y, body.velocity.z);
+        }
+
+		glDrawArrays(GL_TRIANGLES, 0, circleTemplate.size() / 2);
         
-        planet1.applyVelocity(shader);
-        planet2.applyVelocity(shader);
 
         glfwSwapBuffers(window);
     }
@@ -146,3 +129,34 @@ int main(){
     return 0;
 }
 
+void keycallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+
+    if (key == GLFW_KEY_O && HoldOrPress)
+        zoom += zoomSpeed;
+
+    if (key == GLFW_KEY_P && HoldOrPress)
+        zoom -= zoomSpeed;
+
+	glm::mat4 tempVec = glm::mat4(1.0f);
+
+    if (key == GLFW_KEY_W && HoldOrPress)
+        cameraPos -= glm::vec3(0.0f, cameraSpeed, 0.0f);
+	if (key == GLFW_KEY_S && HoldOrPress) 
+		cameraPos += glm::vec3(0.0f, cameraSpeed, 0.0f);
+	if (key == GLFW_KEY_A && HoldOrPress)
+		cameraPos += glm::vec3(cameraSpeed, 0.0f, 0.0f);
+    if (key == GLFW_KEY_D && HoldOrPress)
+		cameraPos -= glm::vec3(cameraSpeed, 0.0f, 0.0f);
+
+    if (key == GLFW_KEY_W && key == GLFW_KEY_D && HoldOrPress)
+        cameraPos -= glm::vec3(cameraSpeed, cameraSpeed, 0.0f);
+    if (key == GLFW_KEY_W && key == GLFW_KEY_A && HoldOrPress)
+        cameraPos += glm::vec3(cameraSpeed, -cameraSpeed, 0.0f);
+    if (key == GLFW_KEY_S && key == GLFW_KEY_D && HoldOrPress)
+        cameraPos -= glm::vec3(cameraSpeed, -cameraSpeed, 0.0f);
+    if (key == GLFW_KEY_S && key == GLFW_KEY_A && HoldOrPress)
+        cameraPos += glm::vec3(cameraSpeed, cameraSpeed, 0.0f);
+
+}

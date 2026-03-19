@@ -22,6 +22,7 @@
     <VCProjectVersion>18.0</VCProjectVersion>
     <ProjectGuid>{903843CA-9867-9AE5-72D0-0A02EEB0CB5B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -92,6 +93,7 @@
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -125,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="celestialBody.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\buffers.cpp" />
     <ClCompile Include="src\glad.c" />
@@ -133,6 +136,7 @@
     <ClCompile Include="src\shaders.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="celestialBody.h" />
     <ClInclude Include="src\buffers.h" />
     <ClInclude Include="src\glad.h" />
     <ClInclude Include="src\glm\common.hpp" />

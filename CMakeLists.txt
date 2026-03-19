@@ -1,7 +1,11 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(gravitySimulator VERSION 0.1.0 LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(gravitySimulator main.cpp src/glm/glm.hpp src/glm/gtc/matrix_transform.hpp src/KHR/khrplatform.h src/glad.c src/buffers.cpp src/shaders.cpp shaders/shader.vs shaders/shader.fs)
+add_executable(gravitySimulator main.cpp src/glm/glm.hpp src/glm/gtc/matrix_transform.hpp src/KHR/khrplatform.h src/glad.c src/buffers.cpp src/shaders.cpp shaders/shader.vs shaders/shader.fs celestialBody.h celestialBody.cpp)
+target_compile_features(gravitySimulator PRIVATE cxx_std_17)
 target_link_libraries(gravitySimulator glfw)
 target_include_directories(gravitySimulator PRIVATE src)
 target_include_directories(gravitySimulator PUBLIC include)

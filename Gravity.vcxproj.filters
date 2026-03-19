@@ -24,13 +24,18 @@
     <ClCompile Include="src\shaders.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\glad.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\glm\detail\glm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\glm\glm.cppm" />
+    <ClCompile Include="src\glad.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glm\glm.cppm">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="celestialBody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\buffers.h">
@@ -915,6 +920,9 @@
     <ClInclude Include="src\khr\khrplatform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="celestialBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\glm\detail\func_common.inl">
@@ -1337,10 +1345,10 @@
     <None Include="src\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="out\build\x64-debug\cmakefiles\4.1.2-msvc8\CMakeDetermineCompilerABI_C.bin">
+    <None Include="shaders\shader.fs">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="out\build\x64-debug\cmakefiles\4.1.2-msvc8\CMakeDetermineCompilerABI_CXX.bin">
+    <None Include="shaders\shader.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
